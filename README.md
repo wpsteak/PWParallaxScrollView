@@ -3,7 +3,13 @@ PWParallaxScrollView
 
 PWParallaxScrollView is a library that provide a simple way to implement sliding menu of WWF-like style
 
-![](https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/git/screenshot.gif)
+![](https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/gif/screenshot.gif)
+
+##CocoaPods
+
+ ```
+pod "PWParallaxScrollView"
+ ```
 
 ##Usage
 
@@ -36,7 +42,7 @@ PWParallaxScrollView is a library that provide a simple way to implement sliding
 
 ##### foregroundScreenEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 100);
 
-![](https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/git/edgeinsets.gif)
+![](https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/gif/edgeinsets.gif)
 
 #####sample code
 
@@ -60,7 +66,7 @@ PWParallaxScrollView is a library that provide a simple way to implement sliding
 
 ##### foregroundScreenEdgeInsets = UIEdgeInsetsZero;
 
-![](https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/git/edgeinsets1.gif)
+![](https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/gif/edgeinsets1.gif)
 
 #####sample code
 
@@ -83,7 +89,7 @@ PWParallaxScrollView is a library that provide a simple way to implement sliding
 
 ##hit test
 
-![](https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/git/screenshot1.gif)
+![](https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/gif/screenshot1.gif)
 
 ```
 - (UIView *)foregroundViewAtIndex:(NSInteger)index scrollView:(PWParallaxScrollView *)scrollView
@@ -103,7 +109,7 @@ PWParallaxScrollView is a library that provide a simple way to implement sliding
 
 ##moveToIndex , prev , next
 
-![](https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/git/screenshot3.gif)
+![](https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/gif/screenshot3.gif)
 #####sample code
 
 ```
@@ -120,7 +126,7 @@ PWParallaxScrollView is a library that provide a simple way to implement sliding
 
 ##background view only
 
-![](https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/git/screenshot4.gif)
+![](https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/gif/screenshot4.gif)
 
 #####just not implement the foregroundViewAtIndex:scrollView: method (or return nil)
 

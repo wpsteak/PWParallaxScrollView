@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4E5EC8D1-52BC-48D3-B656-AA1B700D9A93</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PWParallaxScrollView</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E19B23AA-3F44-4D7A-A9DC-07F53FACFE8E</key>
+		<string>https://github.com/wpsteak/PWParallaxScrollView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PWParallaxScrollView.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E19B23AA-3F44-4D7A-A9DC-07F53FACFE8E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/wpsteak/PWParallaxScrollView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E19B23AA-3F44-4D7A-A9DC-07F53FACFE8E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E19B23AA-3F44-4D7A-A9DC-07F53FACFE8E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PWParallaxScrollView</string>
+		</dict>
+	</array>
+</dict>
+</plist>

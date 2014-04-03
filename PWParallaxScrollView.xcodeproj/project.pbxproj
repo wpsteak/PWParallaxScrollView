@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F497D91D17DC93EF007DE2EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F497D91C17DC93EF007DE2EC /* UIKit.framework */; };
+		F497D91F17DC93EF007DE2EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F497D91E17DC93EF007DE2EC /* Foundation.framework */; };
+		F4E98C1318ECEE450078CB10 /* PWParallaxScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E98C1218ECEE450078CB10 /* PWParallaxScrollView.m */; };
+		F4E98C3118ECEF220078CB10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E98C1C18ECEF220078CB10 /* AppDelegate.m */; };
+		F4E98C3218ECEF220078CB10 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4E98C1D18ECEF220078CB10 /* Default-568h@2x.png */; };
+		F4E98C3318ECEF220078CB10 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F4E98C1E18ECEF220078CB10 /* Default.png */; };
+		F4E98C3418ECEF220078CB10 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4E98C1F18ECEF220078CB10 /* Default@2x.png */; };
+		F4E98C3518ECEF220078CB10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4E98C2018ECEF220078CB10 /* InfoPlist.strings */; };
+		F4E98C3618ECEF220078CB10 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4E98C2218ECEF220078CB10 /* ViewController_iPad.xib */; };
+		F4E98C3718ECEF220078CB10 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4E98C2418ECEF220078CB10 /* ViewController_iPhone.xib */; };
+		F4E98C3818ECEF220078CB10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E98C2618ECEF220078CB10 /* main.m */; };
+		F4E98C3A18ECEF220078CB10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E98C2A18ECEF220078CB10 /* ViewController.m */; };
+		F4E98C4218ECEFA50078CB10 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4E98C3C18ECEFA50078CB10 /* 1.jpg */; };
+		F4E98C4318ECEFA50078CB10 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4E98C3D18ECEFA50078CB10 /* 2.jpg */; };
+		F4E98C4418ECEFA50078CB10 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4E98C3E18ECEFA50078CB10 /* 3.jpg */; };
+		F4E98C4518ECEFA50078CB10 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4E98C3F18ECEFA50078CB10 /* 4.jpg */; };
+		F4E98C4618ECEFA50078CB10 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4E98C4018ECEFA50078CB10 /* 5.jpg */; };
+		F4E98C4718ECEFA50078CB10 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4E98C4118ECEFA50078CB10 /* 6.jpg */; };
+		F4E98C4918ECF01D0078CB10 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F497D92017DC93EF007DE2EC /* CoreGraphics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F497D91917DC93EF007DE2EC /* PWParallaxScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PWParallaxScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F497D91C17DC93EF007DE2EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F497D91E17DC93EF007DE2EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F497D92017DC93EF007DE2EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F4E98C1118ECEE450078CB10 /* PWParallaxScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWParallaxScrollView.h; sourceTree = "<group>"; };
+		F4E98C1218ECEE450078CB10 /* PWParallaxScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWParallaxScrollView.m; sourceTree = "<group>"; };
+		F4E98C1B18ECEF220078CB10 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F4E98C1C18ECEF220078CB10 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F4E98C1D18ECEF220078CB10 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F4E98C1E18ECEF220078CB10 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F4E98C1F18ECEF220078CB10 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F4E98C2118ECEF220078CB10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F4E98C2318ECEF220078CB10 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		F4E98C2518ECEF220078CB10 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		F4E98C2618ECEF220078CB10 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F4E98C2718ECEF220078CB10 /* PWParallaxScrollView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PWParallaxScrollView-Info.plist"; sourceTree = "<group>"; };
+		F4E98C2818ECEF220078CB10 /* PWParallaxScrollView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PWParallaxScrollView-Prefix.pch"; sourceTree = "<group>"; };
+		F4E98C2918ECEF220078CB10 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F4E98C2A18ECEF220078CB10 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F4E98C3C18ECEFA50078CB10 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		F4E98C3D18ECEFA50078CB10 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		F4E98C3E18ECEFA50078CB10 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		F4E98C3F18ECEFA50078CB10 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		F4E98C4018ECEFA50078CB10 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		F4E98C4118ECEFA50078CB10 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F497D91617DC93EF007DE2EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4E98C4918ECF01D0078CB10 /* CoreGraphics.framework in Frameworks */,
+				F497D91D17DC93EF007DE2EC /* UIKit.framework in Frameworks */,
+				F497D91F17DC93EF007DE2EC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F497D91017DC93EF007DE2EC = {
+			isa = PBXGroup;
+			children = (
+				F4E98C1018ECEE450078CB10 /* PWParallaxScrollView */,
+				F4E98C1418ECEF220078CB10 /* PWParallaxScrollViewExample */,
+				F4E98C4818ECEFAE0078CB10 /* Resources */,
+				F497D91B17DC93EF007DE2EC /* Frameworks */,
+				F497D91A17DC93EF007DE2EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F497D91A17DC93EF007DE2EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F497D91917DC93EF007DE2EC /* PWParallaxScrollView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F497D91B17DC93EF007DE2EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F497D91C17DC93EF007DE2EC /* UIKit.framework */,
+				F497D91E17DC93EF007DE2EC /* Foundation.framework */,
+				F497D92017DC93EF007DE2EC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4E98C1018ECEE450078CB10 /* PWParallaxScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				F4E98C1118ECEE450078CB10 /* PWParallaxScrollView.h */,
+				F4E98C1218ECEE450078CB10 /* PWParallaxScrollView.m */,
+			);
+			path = PWParallaxScrollView;
+			sourceTree = "<group>";
+		};
+		F4E98C1418ECEF220078CB10 /* PWParallaxScrollViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				F4E98C3B18ECEFA50078CB10 /* Images */,
+				F4E98C1B18ECEF220078CB10 /* AppDelegate.h */,
+				F4E98C1C18ECEF220078CB10 /* AppDelegate.m */,
+				F4E98C2218ECEF220078CB10 /* ViewController_iPad.xib */,
+				F4E98C2418ECEF220078CB10 /* ViewController_iPhone.xib */,
+				F4E98C2918ECEF220078CB10 /* ViewController.h */,
+				F4E98C2A18ECEF220078CB10 /* ViewController.m */,
+			);
+			path = PWParallaxScrollViewExample;
+			sourceTree = "<group>";
+		};
+		F4E98C3B18ECEFA50078CB10 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F4E98C3C18ECEFA50078CB10 /* 1.jpg */,
+				F4E98C3D18ECEFA50078CB10 /* 2.jpg */,
+				F4E98C3E18ECEFA50078CB10 /* 3.jpg */,
+				F4E98C3F18ECEFA50078CB10 /* 4.jpg */,
+				F4E98C4018ECEFA50078CB10 /* 5.jpg */,
+				F4E98C4118ECEFA50078CB10 /* 6.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		F4E98C4818ECEFAE0078CB10 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F4E98C1D18ECEF220078CB10 /* Default-568h@2x.png */,
+				F4E98C1E18ECEF220078CB10 /* Default.png */,
+				F4E98C1F18ECEF220078CB10 /* Default@2x.png */,
+				F4E98C2018ECEF220078CB10 /* InfoPlist.strings */,
+				F4E98C2618ECEF220078CB10 /* main.m */,
+				F4E98C2718ECEF220078CB10 /* PWParallaxScrollView-Info.plist */,
+				F4E98C2818ECEF220078CB10 /* PWParallaxScrollView-Prefix.pch */,
+			);
+			name = Resources;
+			path = PWParallaxScrollViewExample;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F497D91817DC93EF007DE2EC /* PWParallaxScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F497D93F17DC93F0007DE2EC /* Build configuration list for PBXNativeTarget "PWParallaxScrollView" */;
+			buildPhases = (
+				F497D91517DC93EF007DE2EC /* Sources */,
+				F497D91617DC93EF007DE2EC /* Frameworks */,
+				F497D91717DC93EF007DE2EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PWParallaxScrollView;
+			productName = PWParallaxScrollView;
+			productReference = F497D91917DC93EF007DE2EC /* PWParallaxScrollView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F497D91117DC93EF007DE2EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Prince;
+			};
+			buildConfigurationList = F497D91417DC93EF007DE2EC /* Build configuration list for PBXProject "PWParallaxScrollView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F497D91017DC93EF007DE2EC;
+			productRefGroup = F497D91A17DC93EF007DE2EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F497D91817DC93EF007DE2EC /* PWParallaxScrollView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F497D91717DC93EF007DE2EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4E98C4718ECEFA50078CB10 /* 6.jpg in Resources */,
+				F4E98C4618ECEFA50078CB10 /* 5.jpg in Resources */,
+				F4E98C3418ECEF220078CB10 /* Default@2x.png in Resources */,
+				F4E98C3318ECEF220078CB10 /* Default.png in Resources */,
+				F4E98C4518ECEFA50078CB10 /* 4.jpg in Resources */,
+				F4E98C4418ECEFA50078CB10 /* 3.jpg in Resources */,
+				F4E98C3218ECEF220078CB10 /* Default-568h@2x.png in Resources */,
+				F4E98C3518ECEF220078CB10 /* InfoPlist.strings in Resources */,
+				F4E98C3618ECEF220078CB10 /* ViewController_iPad.xib in Resources */,
+				F4E98C4318ECEFA50078CB10 /* 2.jpg in Resources */,
+				F4E98C3718ECEF220078CB10 /* ViewController_iPhone.xib in Resources */,
+				F4E98C4218ECEFA50078CB10 /* 1.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F497D91517DC93EF007DE2EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4E98C3118ECEF220078CB10 /* AppDelegate.m in Sources */,
+				F4E98C3818ECEF220078CB10 /* main.m in Sources */,
+				F4E98C3A18ECEF220078CB10 /* ViewController.m in Sources */,
+				F4E98C1318ECEE450078CB10 /* PWParallaxScrollView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F4E98C2018ECEF220078CB10 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4E98C2118ECEF220078CB10 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F4E98C2218ECEF220078CB10 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4E98C2318ECEF220078CB10 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		F4E98C2418ECEF220078CB10 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4E98C2518ECEF220078CB10 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F497D93D17DC93F0007DE2EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F497D93E17DC93F0007DE2EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F497D94017DC93F0007DE2EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PWParallaxScrollViewExample/PWParallaxScrollView-Prefix.pch";
+				INFOPLIST_FILE = "PWParallaxScrollViewExample/PWParallaxScrollView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F497D94117DC93F0007DE2EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PWParallaxScrollViewExample/PWParallaxScrollView-Prefix.pch";
+				INFOPLIST_FILE = "PWParallaxScrollViewExample/PWParallaxScrollView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F497D91417DC93EF007DE2EC /* Build configuration list for PBXProject "PWParallaxScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F497D93D17DC93F0007DE2EC /* Debug */,
+				F497D93E17DC93F0007DE2EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F497D93F17DC93F0007DE2EC /* Build configuration list for PBXNativeTarget "PWParallaxScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F497D94017DC93F0007DE2EC /* Debug */,
+				F497D94117DC93F0007DE2EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F497D91117DC93EF007DE2EC /* Project object */;
+}

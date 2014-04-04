@@ -12,7 +12,7 @@
 
 @interface PWParallaxScrollView : UIView
 
-@property (nonatomic, weak) id<PWParallaxScrollViewDataSource> dataSource;
+@property (nonatomic, assign) id<PWParallaxScrollViewDataSource> dataSource;
 @property (nonatomic, readonly) NSInteger currentIndex;
 @property (nonatomic, assign) UIEdgeInsets foregroundScreenEdgeInsets;
 

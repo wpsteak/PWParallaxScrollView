@@ -21,11 +21,23 @@ static const NSInteger PWInvalidPosition = -1;
 @property (nonatomic, strong) UIScrollView *backgroundScrollView;
 
 @property (nonatomic, strong) UIView *currentBottomView;
+
+@property (nonatomic, assign) NSInteger currentIndex;
 @end
 
 @implementation PWParallaxScrollView
 
 #pragma mark 
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self initControl];
+    }
+    return self;
+}
+
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -126,12 +138,6 @@ static const NSInteger PWInvalidPosition = -1;
     }
 }
 
-- (NSInteger)currentIndex
-{
-    NSInteger zeroCheck = MAX(_backgroundViewIndex, 0);
-    NSInteger boundCheck = MIN(_numberOfItems - 1, zeroCheck);
-    return boundCheck;
-}
 
 #pragma mark - private method
 
@@ -267,6 +273,16 @@ static const NSInteger PWInvalidPosition = -1;
         }
         
         [self loadBackgroundViewAtIndex:_userHoldingDownIndex];
+    }
+    
+    float currentIndexCalc = round(1.f*scrollView.contentOffset.x/self.frame.size.width);
+    
+    if(self.currentIndex != currentIndexCalc){
+        self.currentIndex = currentIndexCalc;
+        
+        if([self.delegate respondsToSelector:@selector(parallaxScrollViewIndexChanged:)]){
+            [self.delegate parallaxScrollViewIndexChanged:self.currentIndex];
+        }
     }
 }
 

@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>4E5EC8D1-52BC-48D3-B656-AA1B700D9A93</string>
+	<string>A55B8B94-F657-4754-904F-CC70B357BB45</string>
 	<key>IDESourceControlProjectName</key>
 	<string>PWParallaxScrollView</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E19B23AA-3F44-4D7A-A9DC-07F53FACFE8E</key>
-		<string>https://github.com/wpsteak/PWParallaxScrollView.git</string>
+		<key>17ADA1BC-5C47-46A0-9D8D-50E1D2F0D779</key>
+		<string>https://github.com/matibot/PWParallaxScrollView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>PWParallaxScrollView.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E19B23AA-3F44-4D7A-A9DC-07F53FACFE8E</key>
+		<key>17ADA1BC-5C47-46A0-9D8D-50E1D2F0D779</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/wpsteak/PWParallaxScrollView.git</string>
+	<string>https://github.com/matibot/PWParallaxScrollView.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E19B23AA-3F44-4D7A-A9DC-07F53FACFE8E</string>
+	<string>17ADA1BC-5C47-46A0-9D8D-50E1D2F0D779</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E19B23AA-3F44-4D7A-A9DC-07F53FACFE8E</string>
+			<string>17ADA1BC-5C47-46A0-9D8D-50E1D2F0D779</string>
 			<key>IDESourceControlWCCName</key>
-			<string>PWParallaxScrollView</string>
+			<string>PWParallaxScrollViewMati</string>
 		</dict>
 	</array>
 </dict>

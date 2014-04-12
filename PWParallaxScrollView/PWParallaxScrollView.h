@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @protocol PWParallaxScrollViewDataSource;
+@protocol PWParallaxScrollViewDelegate;
 
 @interface PWParallaxScrollView : UIView
 
+@property (nonatomic, assign) id<PWParallaxScrollViewDelegate> delegate;
 @property (nonatomic, assign) id<PWParallaxScrollViewDataSource> dataSource;
 @property (nonatomic, readonly) NSInteger currentIndex;
 @property (nonatomic, assign) UIEdgeInsets foregroundScreenEdgeInsets;
+
+@property (nonatomic, assign) NSInteger maxAllowableItem;
 
 - (void)prevItem;
 - (void)nextItem;
@@ -32,4 +36,13 @@
 - (UIView *)foregroundViewAtIndex:(NSInteger)index scrollView:(PWParallaxScrollView *)scrollView;
 
 @end
+
+@protocol PWParallaxScrollViewDelegate <NSObject>
+
+@optional
+- (void)parallaxScrollViewIndexChanged:(NSInteger)index;
+- (void)parallaxScrollViewDidEndDecelerating:(NSInteger)index;
+
+@end
+
 

@@ -9,10 +9,11 @@
 #import "ViewController.h"
 #import "PWParallaxScrollView.h"
 
-@interface ViewController () <PWParallaxScrollViewDataSource>
+@interface ViewController () <PWParallaxScrollViewDataSource,PWParallaxScrollViewDelegate>
 
 @property (nonatomic, strong) PWParallaxScrollView *scrollView;
 @property (nonatomic, strong) NSArray *photos;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @end
 
@@ -37,7 +38,8 @@
 
 - (NSInteger)numberOfItemsInScrollView:(PWParallaxScrollView *)scrollView
 {
-    return [self.photos count];
+    self.pageControl.numberOfPages = [self.photos count];
+    return self.pageControl.numberOfPages;
 }
 
 - (UIView *)backgroundViewAtIndex:(NSInteger)index scrollView:(PWParallaxScrollView *)scrollView
@@ -81,8 +83,11 @@
 - (void)initControl
 {
     self.scrollView = [[PWParallaxScrollView alloc] initWithFrame:self.view.bounds];
+    self.pageControl.currentPage = self.scrollView.currentIndex;
+    
+    
 //    _scrollView.foregroundScreenEdgeInsets = UIEdgeInsetsZero;
-    _scrollView.foregroundScreenEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 100);
+    //_scrollView.foregroundScreenEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 100);
     [self.view insertSubview:_scrollView atIndex:0];
 }
 
@@ -94,6 +99,7 @@
 - (void)reloadData
 {
     _scrollView.dataSource = self;
+    _scrollView.delegate = self;
 }
 
 - (void)viewDidLoad
@@ -104,6 +110,10 @@
     [self initControl];
     [self setContent:nil];
     [self reloadData];
+}
+
+-(void)parallaxScrollViewIndexChanged:(NSInteger)index{
+    self.pageControl.currentPage = index;
 }
 
 - (void)didReceiveMemoryWarning

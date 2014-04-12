@@ -21,11 +21,23 @@ static const NSInteger PWInvalidPosition = -1;
 @property (nonatomic, strong) UIScrollView *backgroundScrollView;
 
 @property (nonatomic, strong) UIView *currentBottomView;
+
+@property (nonatomic, assign) NSInteger currentIndex;
 @end
 
 @implementation PWParallaxScrollView
 
-#pragma mark 
+#pragma mark
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self initControl];
+    }
+    return self;
+}
+
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -126,12 +138,15 @@ static const NSInteger PWInvalidPosition = -1;
     }
 }
 
-- (NSInteger)currentIndex
-{
-    NSInteger zeroCheck = MAX(_backgroundViewIndex, 0);
-    NSInteger boundCheck = MIN(_numberOfItems - 1, zeroCheck);
-    return boundCheck;
+-(void)setMaxAllowableItem:(NSInteger)maxAllowableItem{
+    int width = MIN(maxAllowableItem,self.numberOfItems)*self.frame.size.width;
+    CGSize currentSize = self.frame.size;
+    currentSize.width = width;
+    
+    //[_backgroundScrollView setContentSize:currentSize];
+    [_touchScrollView setContentSize:currentSize];
 }
+
 
 #pragma mark - private method
 
@@ -170,7 +185,7 @@ static const NSInteger PWInvalidPosition = -1;
 - (void)loadForegroundViewAtIndex:(NSInteger)index
 {
     UIView *newParallaxView = [self foregroundViewAtIndex:index];
-
+    
     [_foregroundScrollView addSubview:newParallaxView];
 }
 
@@ -207,7 +222,7 @@ static const NSInteger PWInvalidPosition = -1;
         newCenterX = CGRectGetWidth(self.frame) / 2 ;
         newBackgroundViewIndex = _backgroundViewIndex;
     }
-
+    
     BOOL backgroundViewIndexChanged = (newBackgroundViewIndex == _backgroundViewIndex) ? NO : YES;
     self.backgroundViewIndex = newBackgroundViewIndex;
     
@@ -243,7 +258,7 @@ static const NSInteger PWInvalidPosition = -1;
 {
     [_backgroundScrollView setContentOffset:scrollView.contentOffset];
     
-    CGFloat factor = _foregroundScrollView.contentSize.width / scrollView.contentSize.width;
+    CGFloat factor = _foregroundScrollView.contentSize.width / (self.numberOfItems*self.frame.size.width);
     [_foregroundScrollView setContentOffset:CGPointMake(factor * scrollView.contentOffset.x, 0)];
     
     CGFloat offsetX = scrollView.contentOffset.x;
@@ -268,7 +283,24 @@ static const NSInteger PWInvalidPosition = -1;
         
         [self loadBackgroundViewAtIndex:_userHoldingDownIndex];
     }
+    
+    float currentIndexCalc = round(1.f*scrollView.contentOffset.x/self.frame.size.width);
+    
+    if(self.currentIndex != currentIndexCalc){
+        self.currentIndex = currentIndexCalc;
+        
+        if([self.delegate respondsToSelector:@selector(parallaxScrollViewIndexChanged:)]){
+            [self.delegate parallaxScrollViewIndexChanged:self.currentIndex];
+        }
+    }
 }
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    if([self.delegate respondsToSelector:@selector(parallaxScrollViewDidEndDecelerating:)]){
+        [self.delegate parallaxScrollViewDidEndDecelerating:self.currentIndex];
+    }
+}
+
 
 #pragma mark hitTest
 
@@ -277,7 +309,7 @@ static const NSInteger PWInvalidPosition = -1;
     for (UIView* subview in _foregroundScrollView.subviews) {
         CGPoint convertedPoint = [self convertPoint:point toView:subview];
         UIView *result = [subview hitTest:convertedPoint withEvent:event];
-
+        
         if ([result isKindOfClass:[UIButton class]]){
             return result;
             break;

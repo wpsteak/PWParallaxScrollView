@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
+                <outlet property="pageControl" destination="uyn-Mt-3QN" id="jMC-Yl-n2h"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
         </placeholder>
@@ -54,6 +55,10 @@
                         <action selector="jumpToItem:" destination="-1" eventType="touchUpInside" id="ZWA-oB-igp"/>
                     </connections>
                 </button>
+                <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="uyn-Mt-3QN">
+                    <rect key="frame" x="699" y="560" width="39" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </pageControl>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>

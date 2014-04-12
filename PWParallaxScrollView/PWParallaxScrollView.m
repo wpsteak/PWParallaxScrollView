@@ -10,7 +10,7 @@
 
 static const NSInteger PWInvalidPosition = -1;
 
-@interface PWParallaxScrollView () <UIScrollViewDelegate, UIGestureRecognizerDelegate>
+@interface PWParallaxScrollView () <UIScrollViewDelegate>
 
 @property (nonatomic, assign) NSInteger numberOfItems;
 @property (nonatomic, assign) NSInteger backgroundViewIndex;
@@ -37,7 +37,6 @@ static const NSInteger PWInvalidPosition = -1;
     }
     return self;
 }
-
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -137,16 +136,6 @@ static const NSInteger PWInvalidPosition = -1;
         [self loadForegroundViewAtIndex:i];
     }
 }
-
--(void)setMaxAllowableItem:(NSInteger)maxAllowableItem{
-    int width = MIN(maxAllowableItem,self.numberOfItems)*self.frame.size.width;
-    CGSize currentSize = self.frame.size;
-    currentSize.width = width;
-    
-    //[_backgroundScrollView setContentSize:currentSize];
-    [_touchScrollView setContentSize:currentSize];
-}
-
 
 #pragma mark - private method
 
@@ -302,18 +291,16 @@ static const NSInteger PWInvalidPosition = -1;
     }
 }
 
-
 #pragma mark hitTest
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
-    for (UIView* subview in _foregroundScrollView.subviews) {
+    for (UIView *subview in _foregroundScrollView.subviews) {
         CGPoint convertedPoint = [self convertPoint:point toView:subview];
         UIView *result = [subview hitTest:convertedPoint withEvent:event];
         
         if ([result isKindOfClass:[UIButton class]]){
             return result;
-            break;
         }
     }
     

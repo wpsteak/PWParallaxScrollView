@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "PWParallaxScrollView.h"
 
-@interface ViewController () <PWParallaxScrollViewDataSource,PWParallaxScrollViewDelegate>
+@interface ViewController () <PWParallaxScrollViewDataSource, PWParallaxScrollViewDelegate>
 
 @property (nonatomic, strong) IBOutlet PWParallaxScrollView *scrollView;
 @property (nonatomic, strong) NSArray *photos;

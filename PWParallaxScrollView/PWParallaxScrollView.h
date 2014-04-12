@@ -13,8 +13,8 @@
 
 @interface PWParallaxScrollView : UIView
 
-@property (nonatomic, assign) id<PWParallaxScrollViewDelegate> delegate;
-@property (nonatomic, assign) id<PWParallaxScrollViewDataSource> dataSource;
+@property (nonatomic, assign) IBOutlet id<PWParallaxScrollViewDelegate> delegate;
+@property (nonatomic, assign) IBOutlet id<PWParallaxScrollViewDataSource> dataSource;
 @property (nonatomic, readonly) NSInteger currentIndex;
 @property (nonatomic, assign) UIEdgeInsets foregroundScreenEdgeInsets;
 

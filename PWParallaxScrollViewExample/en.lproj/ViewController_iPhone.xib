@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
                 <outlet property="pageControl" destination="D7h-4N-qEE" id="uEG-YQ-z5x"/>
+                <outlet property="scrollView" destination="GG9-oc-CBm" id="O0c-Jo-lFc"/>
                 <outlet property="view" destination="6" id="7"/>
             </connections>
         </placeholder>
@@ -16,6 +17,15 @@
             <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GG9-oc-CBm" customClass="PWParallaxScrollView">
+                    <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="FIe-VO-jDK"/>
+                        <outlet property="delegate" destination="-1" id="mnf-Io-Z7q"/>
+                    </connections>
+                </view>
                 <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vb0-Az-XYC">
                     <rect key="frame" x="508" y="139" width="60" height="41"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -56,7 +66,7 @@
                     </connections>
                 </button>
                 <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="D7h-4N-qEE">
-                    <rect key="frame" x="260" y="263" width="39" height="37"/>
+                    <rect key="frame" x="265" y="279" width="39" height="37"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </pageControl>
             </subviews>

@@ -258,7 +258,7 @@ static const NSInteger PWInvalidPosition = -1;
 {
     [_backgroundScrollView setContentOffset:scrollView.contentOffset];
     
-    CGFloat factor = _foregroundScrollView.contentSize.width / (self.numberOfItems*self.frame.size.width);
+    CGFloat factor = _foregroundScrollView.contentSize.width / scrollView.contentSize.width;
     [_foregroundScrollView setContentOffset:CGPointMake(factor * scrollView.contentOffset.x, 0)];
     
     CGFloat offsetX = scrollView.contentOffset.x;
@@ -284,20 +284,21 @@ static const NSInteger PWInvalidPosition = -1;
         [self loadBackgroundViewAtIndex:_userHoldingDownIndex];
     }
     
-    float currentIndexCalc = round(1.f*scrollView.contentOffset.x/self.frame.size.width);
+    CGFloat newCrrentIndex = round(1.0f * scrollView.contentOffset.x / CGRectGetWidth(self.frame));
     
-    if(self.currentIndex != currentIndexCalc){
-        self.currentIndex = currentIndexCalc;
+    if(_currentIndex != newCrrentIndex) {
+        self.currentIndex = newCrrentIndex;
         
-        if([self.delegate respondsToSelector:@selector(parallaxScrollViewIndexChanged:)]){
-            [self.delegate parallaxScrollViewIndexChanged:self.currentIndex];
+        if([self.delegate respondsToSelector:@selector(parallaxScrollView:didChangeIndex:)]){
+            [self.delegate parallaxScrollView:self didChangeIndex:self.currentIndex];
         }
     }
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    if([self.delegate respondsToSelector:@selector(parallaxScrollViewDidEndDecelerating:)]){
-        [self.delegate parallaxScrollViewDidEndDecelerating:self.currentIndex];
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    if([self.delegate respondsToSelector:@selector(parallaxScrollView:didEndDeceleratingAtIndex:)]){
+        [self.delegate parallaxScrollView:self didEndDeceleratingAtIndex:self.currentIndex];
     }
 }
 

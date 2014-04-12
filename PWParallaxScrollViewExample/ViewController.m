@@ -76,7 +76,15 @@
 
 #pragma mark - PWParallaxScrollViewDelegate
 
-- (void)didChangeIndex:(NSInteger)index scrollView:(PWParallaxScrollView *)scrollView {}
+- (void)parallaxScrollView:(PWParallaxScrollView *)scrollView didChangeIndex:(NSInteger)index
+{
+    _pageControl.currentPage = index;
+}
+
+- (void)parallaxScrollView:(PWParallaxScrollView *)scrollView didEndDeceleratingAtIndex:(NSInteger)index
+{
+    
+}
 
 #pragma mark - view's life cycle
 
@@ -110,10 +118,6 @@
     [self initControl];
     [self setContent:nil];
     [self reloadData];
-}
-
--(void)parallaxScrollViewIndexChanged:(NSInteger)index{
-    self.pageControl.currentPage = index;
 }
 
 - (void)didReceiveMemoryWarning

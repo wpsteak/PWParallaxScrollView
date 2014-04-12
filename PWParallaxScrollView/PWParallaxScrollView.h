@@ -40,8 +40,8 @@
 @protocol PWParallaxScrollViewDelegate <NSObject>
 
 @optional
-- (void)parallaxScrollViewIndexChanged:(NSInteger)index;
-- (void)parallaxScrollViewDidEndDecelerating:(NSInteger)index;
+- (void)parallaxScrollView:(PWParallaxScrollView *)scrollView didChangeIndex:(NSInteger)index;
+- (void)parallaxScrollView:(PWParallaxScrollView *)scrollView didEndDeceleratingAtIndex:(NSInteger)index;
 
 @end
 

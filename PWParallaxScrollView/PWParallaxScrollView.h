@@ -18,6 +18,8 @@
 @property (nonatomic, readonly) NSInteger currentIndex;
 @property (nonatomic, assign) UIEdgeInsets foregroundScreenEdgeInsets;
 
+@property (nonatomic, assign) NSInteger maxAllowableItem;
+
 - (void)prevItem;
 - (void)nextItem;
 - (void)moveToIndex:(NSInteger)index;
@@ -39,6 +41,7 @@
 
 @optional
 - (void)parallaxScrollViewIndexChanged:(NSInteger)index;
+- (void)parallaxScrollViewDidEndDecelerating:(NSInteger)index;
 
 @end
 

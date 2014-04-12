@@ -11,10 +11,10 @@
 
 @interface ViewController () <PWParallaxScrollViewDataSource, PWParallaxScrollViewDelegate>
 
-@property (nonatomic, strong) IBOutlet PWParallaxScrollView *scrollView;
-@property (nonatomic, strong) NSArray *photos;
-@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (nonatomic, weak) IBOutlet PWParallaxScrollView *scrollView;
+@property (nonatomic, weak) IBOutlet UIPageControl *pageControl;
 
+@property (nonatomic, strong) NSArray *photos;
 @end
 
 @implementation ViewController

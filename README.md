@@ -1,15 +1,17 @@
 PWParallaxScrollView
 ====================
 
-PWParallaxScrollView is a library that provide a simple way to implement sliding menu of WWF-like style
+PWParallaxScrollView is a library for creating sliding menus with parallax effect inspired by the WWF app
 
 ![](https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/gif/screenshot.gif)
+
 
 ##CocoaPods
 
  ```
 pod "PWParallaxScrollView"
  ```
+
 
 ##Usage
 
@@ -136,6 +138,24 @@ pod "PWParallaxScrollView"
 
 ```
 
+##Change Log 1.1.0
+
+- add interface builder support (initWithCoder, Outlets)
+
+- add PWParallaxDelegate and provides methods to check whether the current index is changed
+
+###Thanks for contribution
+
+- @matibot
 
 ## MIT License
-see license file
+
+PWParallaxScrollView is released under the MIT License (see the License file)
+
+##Contact
+
+Any suggestions or improvements?
+
+feel free to contact me
+
+wpsteak@gmail.com

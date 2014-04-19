@@ -11,10 +11,10 @@
 
 @interface ViewController () <PWParallaxScrollViewDataSource, PWParallaxScrollViewDelegate>
 
-@property (nonatomic, weak) IBOutlet PWParallaxScrollView *scrollView;
-@property (nonatomic, weak) IBOutlet UIPageControl *pageControl;
-
+@property (nonatomic, strong) PWParallaxScrollView *scrollView;
 @property (nonatomic, strong) NSArray *photos;
+
+@property (nonatomic, weak) IBOutlet UIPageControl *pageControl;
 @end
 
 @implementation ViewController
@@ -90,8 +90,11 @@
 
 - (void)initControl
 {
+    self.scrollView = [[PWParallaxScrollView alloc] initWithFrame:self.view.bounds];
+
 //    _scrollView.foregroundScreenEdgeInsets = UIEdgeInsetsZero;
     _scrollView.foregroundScreenEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 100);
+    [self.view insertSubview:_scrollView atIndex:0];
 }
 
 - (void)setContent:(id)content
@@ -101,7 +104,8 @@
 
 - (void)reloadData
 {
-    [_scrollView reloadData];
+    _scrollView.delegate = self;
+    _scrollView.dataSource = self;
 }
 
 - (void)viewDidLoad

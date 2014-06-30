@@ -23,6 +23,9 @@ static const NSInteger PWInvalidPosition = -1;
 @property (nonatomic, strong) UIView *currentBottomView;
 
 @property (nonatomic, assign) NSInteger currentIndex;
+
+- (void)touchScrollViewTapped:(id)sender;
+
 @end
 
 @implementation PWParallaxScrollView
@@ -70,6 +73,10 @@ static const NSInteger PWInvalidPosition = -1;
     _touchScrollView.backgroundColor = [UIColor clearColor];
     _touchScrollView.contentOffset = CGPointMake(0, 0);
     _touchScrollView.multipleTouchEnabled = YES;
+    
+    UITapGestureRecognizer *tapGestureRecognize = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchScrollViewTapped:)];
+    tapGestureRecognize.numberOfTapsRequired = 1;
+    [_touchScrollView addGestureRecognizer:tapGestureRecognize];
     
     self.foregroundScrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
     _foregroundScrollView.scrollEnabled = NO;
@@ -138,6 +145,12 @@ static const NSInteger PWInvalidPosition = -1;
 }
 
 #pragma mark - private method
+- (void)touchScrollViewTapped:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(parallaxScrollView:didRecieveTapAtIndex:)]) {
+        [self.delegate parallaxScrollView:self didRecieveTapAtIndex:self.currentIndex];
+    }
+}
 
 - (UIView *)foregroundViewAtIndex:(NSInteger)index
 {
@@ -292,7 +305,6 @@ static const NSInteger PWInvalidPosition = -1;
 }
 
 #pragma mark hitTest
-
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
     for (UIView *subview in _foregroundScrollView.subviews) {

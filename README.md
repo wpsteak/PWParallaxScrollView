@@ -138,6 +138,14 @@ pod "PWParallaxScrollView"
 
 ```
 
+##Change Log 1.1.5
+
+add delegate to receive touchScrollViewTapped event
+
+```
+- (void)parallaxScrollView:(PWParallaxScrollView *)scrollView didRecieveTapAtIndex:(NSInteger)index;
+```
+
 ##Change Log 1.1.0
 
 - add interface builder support (initWithCoder, Outlets)
@@ -147,6 +155,7 @@ pod "PWParallaxScrollView"
 ###Thanks for contribution
 
 - @matibot
+- @Morgan-Kennedy
 
 ## MIT License
 

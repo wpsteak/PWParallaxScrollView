@@ -19,6 +19,7 @@
 @property (nonatomic, assign) UIEdgeInsets foregroundScreenEdgeInsets;
 
 @property (nonatomic, assign) NSInteger maxAllowableItem;
+@property (nonatomic, assign) BOOL enabled;
 
 - (void)prevItem;
 - (void)nextItem;
@@ -43,6 +44,7 @@
 - (void)parallaxScrollView:(PWParallaxScrollView *)scrollView didChangeIndex:(NSInteger)index;
 - (void)parallaxScrollView:(PWParallaxScrollView *)scrollView didEndDeceleratingAtIndex:(NSInteger)index;
 - (void)parallaxScrollView:(PWParallaxScrollView *)scrollView didRecieveTapAtIndex:(NSInteger)index;
+- (void)parallaxScrollView:(PWParallaxScrollView *)scrollView didEndScrollingAnimation:(NSInteger)index;
 
 @end
 

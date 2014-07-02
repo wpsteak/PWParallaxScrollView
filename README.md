@@ -9,9 +9,9 @@ PWParallaxScrollView is a library for creating sliding menus with parallax effec
 ##CocoaPods
 
  ```
-pod "PWParallaxScrollView"
- ```
+pod 'PWParallaxScrollView', '~> 1.1.5'
 
+ ```
 
 ##Usage
 
@@ -146,16 +146,19 @@ add delegate to receive touchScrollViewTapped event
 - (void)parallaxScrollView:(PWParallaxScrollView *)scrollView didRecieveTapAtIndex:(NSInteger)index;
 ```
 
+####Thanks for contribution
+
+- @Morgan-Kennedy
+
 ##Change Log 1.1.0
 
 - add interface builder support (initWithCoder, Outlets)
 
 - add PWParallaxDelegate and provides methods to check whether the current index is changed
 
-###Thanks for contribution
+####Thanks for contribution
 
 - @matibot
-- @Morgan-Kennedy
 
 ## MIT License
 

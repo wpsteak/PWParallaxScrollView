@@ -15,6 +15,8 @@
 @property (nonatomic, strong) NSArray *photos;
 
 @property (nonatomic, weak) IBOutlet UIPageControl *pageControl;
+@property (nonatomic, weak) IBOutlet UIButton *lockButton;
+
 @end
 
 @implementation ViewController
@@ -34,6 +36,11 @@
     [_scrollView moveToIndex:3];
 }
 
+- (IBAction)toggleLock:(UIButton*)senderButton
+{
+    [senderButton setTitle:(_scrollView.enabled? @"Unlock" : @"Lock") forState:UIControlStateNormal];
+    [_scrollView setEnabled:!_scrollView.enabled];
+}
 #pragma mark - PWParallaxScrollViewSource
 
 - (NSInteger)numberOfItemsInScrollView:(PWParallaxScrollView *)scrollView
@@ -84,6 +91,11 @@
 - (void)parallaxScrollView:(PWParallaxScrollView *)scrollView didEndDeceleratingAtIndex:(NSInteger)index
 {
     
+}
+
+- (void)parallaxScrollView:(PWParallaxScrollView *)scrollView didEndScrollingAnimation:(NSInteger)index
+{
+  
 }
 
 #pragma mark - view's life cycle

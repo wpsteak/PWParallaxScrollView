@@ -50,6 +50,13 @@ static const NSInteger PWInvalidPosition = -1;
     return self;
 }
 
+-(void)setFrame:(CGRect)frame{
+    [super setFrame:frame];
+    _touchScrollView.frame = self.bounds;
+    _foregroundScrollView.frame = self.bounds;
+    _backgroundScrollView.frame = self.bounds;
+}
+
 - (void)setDataSource:(id<PWParallaxScrollViewDataSource>)dataSource
 {
     _dataSource = dataSource;

@@ -10,29 +10,29 @@
 	<string>PWParallaxScrollView</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>0D02EFF2-E474-4994-9FFA-5E26408D6717</key>
-		<string>https://github.com/wpsteak/PWParallaxScrollView.git</string>
+		<key>3E183C459E55170D25FCA0466CE3115E287F8D92</key>
+		<string>github.com:iradicator/PWParallaxScrollView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PWParallaxScrollView.xcodeproj/project.xcworkspace</string>
+	<string>PWParallaxScrollView.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0D02EFF2-E474-4994-9FFA-5E26408D6717</key>
+		<key>3E183C459E55170D25FCA0466CE3115E287F8D92</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/wpsteak/PWParallaxScrollView.git</string>
+	<string>github.com:iradicator/PWParallaxScrollView.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0D02EFF2-E474-4994-9FFA-5E26408D6717</string>
+	<string>3E183C459E55170D25FCA0466CE3115E287F8D92</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0D02EFF2-E474-4994-9FFA-5E26408D6717</string>
+			<string>3E183C459E55170D25FCA0466CE3115E287F8D92</string>
 			<key>IDESourceControlWCCName</key>
 			<string>PWParallaxScrollView</string>
 		</dict>

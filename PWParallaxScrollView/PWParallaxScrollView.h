@@ -20,6 +20,7 @@
 
 @property (nonatomic, assign) NSInteger maxAllowableItem;
 @property (nonatomic, assign) BOOL enabled;
+@property (nonatomic, assign) BOOL showsScrollIndicator;
 
 - (void)prevItem;
 - (void)nextItem;

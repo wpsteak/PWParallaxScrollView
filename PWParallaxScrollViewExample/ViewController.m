@@ -106,6 +106,7 @@
 
 //    _scrollView.foregroundScreenEdgeInsets = UIEdgeInsetsZero;
     _scrollView.foregroundScreenEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 100);
+    _scrollView.showsScrollIndicator = NO;
     [self.view insertSubview:_scrollView atIndex:0];
 }
 

@@ -157,6 +157,12 @@ static const NSInteger PWInvalidPosition = -1;
     _touchScrollView.delegate = (enabled? self : nil);
 }
 
+- (void)setShowsScrollIndicator:(BOOL)showsScrollIndicator {
+    _touchScrollView.showsHorizontalScrollIndicator = showsScrollIndicator;
+    _foregroundScrollView.showsHorizontalScrollIndicator = showsScrollIndicator;
+    _backgroundScrollView.showsHorizontalScrollIndicator = showsScrollIndicator;
+}
+
 #pragma mark - private method
 - (void)touchScrollViewTapped:(id)sender
 {

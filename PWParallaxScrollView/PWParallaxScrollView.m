@@ -50,6 +50,13 @@ static const NSInteger PWInvalidPosition = -1;
     return self;
 }
 
+-(void)setFrame:(CGRect)frame{
+    [super setFrame:frame];
+    _touchScrollView.frame = self.bounds;
+    _foregroundScrollView.frame = self.bounds;
+    _backgroundScrollView.frame = self.bounds;
+}
+
 - (void)setDataSource:(id<PWParallaxScrollViewDataSource>)dataSource
 {
     _dataSource = dataSource;
@@ -92,14 +99,18 @@ static const NSInteger PWInvalidPosition = -1;
     [self addSubview:_backgroundScrollView];
     [self addSubview:_foregroundScrollView];
     [self addSubview:_touchScrollView];
+  
+    _enabled = YES;
 }
 
 #pragma mark - public method
 
 - (void)moveToIndex:(NSInteger)index
 {
-    CGFloat newOffsetX = index * CGRectGetWidth(_touchScrollView.frame);
-    [_touchScrollView scrollRectToVisible:CGRectMake(newOffsetX, 0, CGRectGetWidth(_touchScrollView.frame), CGRectGetHeight(_touchScrollView.frame)) animated:YES];
+    if (_enabled) {
+      CGFloat newOffsetX = index * CGRectGetWidth(_touchScrollView.frame);
+      [_touchScrollView scrollRectToVisible:CGRectMake(newOffsetX, 0, CGRectGetWidth(_touchScrollView.frame), CGRectGetHeight(_touchScrollView.frame)) animated:YES];
+    }
 }
 
 - (void)prevItem
@@ -142,6 +153,21 @@ static const NSInteger PWInvalidPosition = -1;
     for (NSInteger i = 0; i < _numberOfItems; i++) {
         [self loadForegroundViewAtIndex:i];
     }
+}
+
+- (void)setEnabled:(BOOL)enabled
+{
+    _enabled = enabled;
+    _touchScrollView.multipleTouchEnabled = enabled;
+    _touchScrollView.pagingEnabled = enabled;
+    _backgroundScrollView.pagingEnabled = enabled;
+    _touchScrollView.delegate = (enabled? self : nil);
+}
+
+- (void)setShowsScrollIndicator:(BOOL)showsScrollIndicator {
+    _touchScrollView.showsHorizontalScrollIndicator = showsScrollIndicator;
+    _foregroundScrollView.showsHorizontalScrollIndicator = showsScrollIndicator;
+    _backgroundScrollView.showsHorizontalScrollIndicator = showsScrollIndicator;
 }
 
 #pragma mark - private method
@@ -304,6 +330,13 @@ static const NSInteger PWInvalidPosition = -1;
     }
 }
 
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    if([self.delegate respondsToSelector:@selector(parallaxScrollView:didEndScrollingAnimation:)]){
+      [self.delegate parallaxScrollView:self didEndScrollingAnimation:self.currentIndex];
+    }
+}
+
 #pragma mark hitTest
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
@@ -316,7 +349,7 @@ static const NSInteger PWInvalidPosition = -1;
         }
     }
     
-    return [super hitTest:point withEvent:event];
+    return (_enabled)? [super hitTest:point withEvent:event] : nil;
 }
 
 @end

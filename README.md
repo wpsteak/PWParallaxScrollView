@@ -10,17 +10,17 @@ PWParallaxScrollView is a library for creating sliding menus with parallax effec
 
 for ObjC
 
- '''
+ ```
 pod 'PWParallaxScrollView', '~> 1.2.0'
 
- '''
+ ```
 
 for Swift,
 
- '''
+ ```
 pod 'PWParallaxScrollView/Swift', '~> 1.2.0'
 
- '''
+ ```
 
 
 ##Usage

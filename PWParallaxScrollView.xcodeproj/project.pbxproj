@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F431D39B1C65DE7F009F5851 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F431D39A1C65DE7F009F5851 /* ViewController.m */; };
 		F431D3B31C65E175009F5851 /* PWParallaxScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431D3B21C65E175009F5851 /* PWParallaxScrollView.swift */; };
 		F431D3B51C65E2A9009F5851 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4E98C2418ECEF220078CB10 /* ViewController.xib */; };
 		F431D3B61C65E3A2009F5851 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E98C1C18ECEF220078CB10 /* AppDelegate.m */; };
@@ -20,6 +19,7 @@
 		F431D3BD1C65E44D009F5851 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4E98C4118ECEFA50078CB10 /* 6.jpg */; };
 		F431D3BF1C65E532009F5851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F431D3BE1C65E532009F5851 /* LaunchScreen.storyboard */; };
 		F431D3C01C65E532009F5851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F431D3BE1C65E532009F5851 /* LaunchScreen.storyboard */; };
+		F47F3C581C65FAEF0042CF2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E98C2A18ECEF220078CB10 /* ViewController.m */; };
 		F497D91D17DC93EF007DE2EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F497D91C17DC93EF007DE2EC /* UIKit.framework */; };
 		F497D91F17DC93EF007DE2EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F497D91E17DC93EF007DE2EC /* Foundation.framework */; };
 		F4E98C1318ECEE450078CB10 /* PWParallaxScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E98C1218ECEE450078CB10 /* PWParallaxScrollView.m */; };
@@ -39,9 +39,7 @@
 
 /* Begin PBXFileReference section */
 		F431D3911C65DE7E009F5851 /* PWParallaxScrollView_ObjCUseSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PWParallaxScrollView_ObjCUseSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F431D3991C65DE7F009F5851 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F431D39A1C65DE7F009F5851 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F431D3B11C65E174009F5851 /* PWParallaxScrollView_ObjCUseSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PWParallaxScrollView_ObjCUseSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		F431D3B11C65E174009F5851 /* PWParallaxScrollView_ObjCUseSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PWParallaxScrollView_ObjCUseSwift-Bridging-Header.h"; path = "PWParallaxScrollViewExample/PWParallaxScrollView_ObjCUseSwift-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		F431D3B21C65E175009F5851 /* PWParallaxScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PWParallaxScrollView.swift; path = PWParallaxScrollView/PWParallaxScrollView.swift; sourceTree = SOURCE_ROOT; };
 		F431D3BE1C65E532009F5851 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F497D91917DC93EF007DE2EC /* PWParallaxScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PWParallaxScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,22 +86,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F431D3921C65DE7E009F5851 /* PWParallaxScrollViewExample_Swift */ = {
-			isa = PBXGroup;
-			children = (
-				F431D3B11C65E174009F5851 /* PWParallaxScrollView_ObjCUseSwift-Bridging-Header.h */,
-				F431D3991C65DE7F009F5851 /* ViewController.h */,
-				F431D39A1C65DE7F009F5851 /* ViewController.m */,
-			);
-			path = PWParallaxScrollViewExample_Swift;
-			sourceTree = "<group>";
-		};
 		F497D91017DC93EF007DE2EC = {
 			isa = PBXGroup;
 			children = (
 				F4E98C1018ECEE450078CB10 /* PWParallaxScrollView */,
 				F4E98C1418ECEF220078CB10 /* PWParallaxScrollViewExample */,
-				F431D3921C65DE7E009F5851 /* PWParallaxScrollViewExample_Swift */,
 				F4E98C4818ECEFAE0078CB10 /* Resources */,
 				F497D91B17DC93EF007DE2EC /* Frameworks */,
 				F497D91A17DC93EF007DE2EC /* Products */,
@@ -142,6 +129,7 @@
 		F4E98C1418ECEF220078CB10 /* PWParallaxScrollViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				F431D3B11C65E174009F5851 /* PWParallaxScrollView_ObjCUseSwift-Bridging-Header.h */,
 				F4E98C1B18ECEF220078CB10 /* AppDelegate.h */,
 				F4E98C1C18ECEF220078CB10 /* AppDelegate.m */,
 				F4E98C2418ECEF220078CB10 /* ViewController.xib */,
@@ -289,8 +277,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F431D3B71C65E3D4009F5851 /* main.m in Sources */,
-				F431D39B1C65DE7F009F5851 /* ViewController.m in Sources */,
 				F431D3B31C65E175009F5851 /* PWParallaxScrollView.swift in Sources */,
+				F47F3C581C65FAEF0042CF2E /* ViewController.m in Sources */,
 				F431D3B61C65E3A2009F5851 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +329,10 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					OBJC_USE_SWIFT_DEMO,
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -352,7 +344,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wpsteak.objcuseswift.PWParallaxScrollView-ObjCUseSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "PWParallaxScrollViewExample_Swift/PWParallaxScrollView_ObjCUseSwift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "PWParallaxScrollViewExample/PWParallaxScrollView_ObjCUseSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -371,6 +363,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = OBJC_USE_SWIFT_DEMO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -382,7 +375,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wpsteak.objcuseswift.PWParallaxScrollView-ObjCUseSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "PWParallaxScrollViewExample_Swift/PWParallaxScrollView_ObjCUseSwift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "PWParallaxScrollViewExample/PWParallaxScrollView_ObjCUseSwift-Bridging-Header.h";
 			};
 			name = Release;
 		};

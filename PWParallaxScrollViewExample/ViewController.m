@@ -7,7 +7,13 @@
 //
 
 #import "ViewController.h"
+
+#ifdef OBJC_USE_SWIFT_DEMO
+#import "PWParallaxScrollView_ObjCUseSwift-swift.h"
+#else
 #import "PWParallaxScrollView.h"
+#endif
+
 
 @interface ViewController () <PWParallaxScrollViewDataSource, PWParallaxScrollViewDelegate>
 

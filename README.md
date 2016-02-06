@@ -138,6 +138,14 @@ pod 'PWParallaxScrollView', '~> 1.1.5'
 
 ```
 
+##Change Log 1.2.0
+
+- add swift version
+
+####Thanks for contribution
+
+- @yume190
+
 ##Change Log 1.1.5
 
 add delegate to receive touchScrollViewTapped event

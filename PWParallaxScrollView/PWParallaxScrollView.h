@@ -30,9 +30,9 @@
 @protocol PWParallaxScrollViewDataSource <NSObject>
 @required
 - (NSInteger)numberOfItemsInScrollView:(PWParallaxScrollView *)scrollView;
-- (UIView *)backgroundViewAtIndex:(NSInteger)index scrollView:(PWParallaxScrollView *)scrollView;
 
 @optional
+- (UIView *)backgroundViewAtIndex:(NSInteger)index scrollView:(PWParallaxScrollView *)scrollView;
 - (UIView *)foregroundViewAtIndex:(NSInteger)index scrollView:(PWParallaxScrollView *)scrollView;
 
 @end

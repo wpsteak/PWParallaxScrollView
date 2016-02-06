@@ -95,8 +95,7 @@
 				F431D3991C65DE7F009F5851 /* ViewController.h */,
 				F431D39A1C65DE7F009F5851 /* ViewController.m */,
 			);
-			name = PWParallaxScrollViewExample_Swift;
-			path = PWParallaxScrollView_ObjCUseSwift;
+			path = PWParallaxScrollViewExample_Swift;
 			sourceTree = "<group>";
 		};
 		F497D91017DC93EF007DE2EC = {
@@ -353,7 +352,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wpsteak.objcuseswift.PWParallaxScrollView-ObjCUseSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "PWParallaxScrollView_ObjCUseSwift/PWParallaxScrollView_ObjCUseSwift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "PWParallaxScrollViewExample_Swift/PWParallaxScrollView_ObjCUseSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -383,7 +382,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wpsteak.objcuseswift.PWParallaxScrollView-ObjCUseSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "PWParallaxScrollView_ObjCUseSwift/PWParallaxScrollView_ObjCUseSwift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "PWParallaxScrollViewExample_Swift/PWParallaxScrollView_ObjCUseSwift-Bridging-Header.h";
 			};
 			name = Release;
 		};

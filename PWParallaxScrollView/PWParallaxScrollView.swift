@@ -122,6 +122,24 @@ public class PWParallaxScrollView: UIView, UIScrollViewDelegate {
         }
     }
     
+    public func moveToIndex(index: Int) {
+        let newOffsetX: CGFloat = CGFloat(index) * CGRectGetWidth(touchScrollView.frame)
+        
+        touchScrollView.scrollRectToVisible(CGRectMake(newOffsetX, 0, CGRectGetWidth(touchScrollView.frame), CGRectGetHeight(touchScrollView.frame)), animated: true)
+    }
+    
+    public func prevItem() {
+        if (self.currentIndex > 0) {
+            moveToIndex(self.currentIndex - 1)
+        }
+    }
+
+    public func nextItem() {
+        if (self.currentIndex < numberOfItems - 1) {
+            moveToIndex(self.currentIndex + 1)
+        }
+    }
+    
     private func loadForegroundViewAtIndex(index: Int) {
         if let newParallaxView: UIView = foregroundViewAtIndex(index) {
             foregroundScrollView.addSubview(newParallaxView)

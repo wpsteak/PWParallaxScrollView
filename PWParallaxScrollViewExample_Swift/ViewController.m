@@ -21,17 +21,17 @@
 
 - (IBAction)prev:(id)sender
 {
-    //    [_scrollView prevItem];
+        [_scrollView prevItem];
 }
 
 - (IBAction)next:(id)sender
 {
-    //    [_scrollView nextItem];
+        [_scrollView nextItem];
 }
 
 - (IBAction)jumpToItem:(id)sender
 {
-    //    [_scrollView moveToIndex:3];
+        [_scrollView moveToIndex:3];
 }
 
 #pragma mark - PWParallaxScrollViewDataSource

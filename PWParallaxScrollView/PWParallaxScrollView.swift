@@ -278,5 +278,18 @@ public class PWParallaxScrollView: UIView, UIScrollViewDelegate {
         }
     }
     
-}
+// MARK: hitTest
     
+    public override func hitTest(point: CGPoint, withEvent event: UIEvent?) -> UIView? {
+        for subview in foregroundScrollView.subviews {
+            let convertedPoint = convertPoint(point, toView: subview)
+            let result = subview.hitTest(convertedPoint, withEvent: event)
+            
+            if result is UIButton {
+                return result
+            }
+        }
+        
+        return super.hitTest(point, withEvent: event)
+    }
+}

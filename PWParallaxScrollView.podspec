@@ -7,6 +7,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { "wpsteak" => "wpsteak@gmail.com" }
   s.platform     = :ios ,'8.0'
+  s.default_subspec = 'ObjC'
   s.source       = {
     :git => "https://github.com/wpsteak/PWParallaxScrollView.git",
     :tag => s.version

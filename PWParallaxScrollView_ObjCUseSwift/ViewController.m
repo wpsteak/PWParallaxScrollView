@@ -1,13 +1,13 @@
 //
 //  ViewController.m
-//  PWParallaxScrollView
+//  PWParallaxScrollView_ObjCUseSwift
 //
-//  Created by wpsteak on 13/9/8.
-//  Copyright (c) 2013年 wpsteak. All rights reserved.
+//  Created by wpsteak on 2/6/16.
+//  Copyright © 2016 Prince. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "PWParallaxScrollView.h"
+#import "PWParallaxScrollView_ObjCUseSwift-swift.h"
 
 @interface ViewController () <PWParallaxScrollViewDataSource, PWParallaxScrollViewDelegate>
 
@@ -21,25 +21,50 @@
 
 - (IBAction)prev:(id)sender
 {
-    [_scrollView prevItem];
+    //    [_scrollView prevItem];
 }
 
 - (IBAction)next:(id)sender
 {
-    [_scrollView nextItem];
+    //    [_scrollView nextItem];
 }
 
 - (IBAction)jumpToItem:(id)sender
 {
-    [_scrollView moveToIndex:3];
+    //    [_scrollView moveToIndex:3];
 }
 
-#pragma mark - PWParallaxScrollViewSource
+#pragma mark - PWParallaxScrollViewDataSource
 
 - (NSInteger)numberOfItemsInScrollView:(PWParallaxScrollView *)scrollView
 {
     self.pageControl.numberOfPages = [self.photos count];
     return self.pageControl.numberOfPages;
+}
+
+- (UIView *)scrollView:(PWParallaxScrollView *)scrollView backgroundViewAtIndex:(NSInteger)index {
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.photos[index]]];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    return imageView;
+}
+
+- (UIView *)scrollView:(PWParallaxScrollView *)scrollView foregroundViewAtIndex:(NSInteger)index {
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, 300, 70)];
+    [label setBackgroundColor:[UIColor blackColor]];
+    [label setTextColor:[UIColor whiteColor]];
+    [label setFont:[UIFont boldSystemFontOfSize:60.0f]];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [label setText:[NSString stringWithFormat:@"Title %@", @(index + 1)]];
+    [label setAlpha:0.7f];
+    [label setUserInteractionEnabled:YES];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setFrame:label.bounds];
+    [button setShowsTouchWhenHighlighted:YES];
+    [button addTarget:self action:@selector(test) forControlEvents:UIControlEventTouchUpInside];
+    [label addSubview:button];
+    
+    return label;
 }
 
 - (UIView *)backgroundViewAtIndex:(NSInteger)index scrollView:(PWParallaxScrollView *)scrollView
@@ -91,8 +116,8 @@
 - (void)initControl
 {
     self.scrollView = [[PWParallaxScrollView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-
-//    _scrollView.foregroundScreenEdgeInsets = UIEdgeInsetsZero;
+    
+    //    _scrollView.foregroundScreenEdgeInsets = UIEdgeInsetsZero;
     _scrollView.foregroundScreenEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 100);
     [self.view insertSubview:_scrollView atIndex:0];
 }
@@ -111,7 +136,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     
     [self initControl];
     [self setContent:nil];

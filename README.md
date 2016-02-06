@@ -1,4 +1,4 @@
-PWParallaxScrollView
+PWParallaxScrollView (ObjC / Swift)
 ====================
 
 PWParallaxScrollView is a library for creating sliding menus with parallax effect inspired by the WWF app
@@ -12,14 +12,12 @@ for ObjC
 
  ```
 pod 'PWParallaxScrollView', '~> 1.2.0'
-
  ```
 
 for Swift,
 
  ```
 pod 'PWParallaxScrollView/Swift', '~> 1.2.0'
-
  ```
 
 

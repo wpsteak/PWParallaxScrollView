@@ -15,7 +15,7 @@
             hideIssues = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F431D36F1C65DE07009F5851"
+               BlueprintIdentifier = "F431D3901C65DE7E009F5851"
                BuildableName = "PWParallaxScrollView_ObjCUseSwift.app"
                BlueprintName = "PWParallaxScrollView_ObjCUseSwift"
                ReferencedContainer = "container:PWParallaxScrollView.xcodeproj">
@@ -33,7 +33,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F431D36F1C65DE07009F5851"
+            BlueprintIdentifier = "F431D3901C65DE7E009F5851"
             BuildableName = "PWParallaxScrollView_ObjCUseSwift.app"
             BlueprintName = "PWParallaxScrollView_ObjCUseSwift"
             ReferencedContainer = "container:PWParallaxScrollView.xcodeproj">
@@ -56,7 +56,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F431D36F1C65DE07009F5851"
+            BlueprintIdentifier = "F431D3901C65DE7E009F5851"
             BuildableName = "PWParallaxScrollView_ObjCUseSwift.app"
             BlueprintName = "PWParallaxScrollView_ObjCUseSwift"
             ReferencedContainer = "container:PWParallaxScrollView.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F431D36F1C65DE07009F5851"
+            BlueprintIdentifier = "F431D3901C65DE7E009F5851"
             BuildableName = "PWParallaxScrollView_ObjCUseSwift.app"
             BlueprintName = "PWParallaxScrollView_ObjCUseSwift"
             ReferencedContainer = "container:PWParallaxScrollView.xcodeproj">

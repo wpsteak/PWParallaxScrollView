@@ -1,64 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
+    <meta charset="UTF-8">
     <title>PWParallaxScrollView by wpsteak</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>PWParallaxScrollView</h1>
-        <h2>PWParallaxScrollView is a library for creating sliding menus with parallax effect inspired by the WWF app</h2>
-        <a href="https://github.com/wpsteak/PWParallaxScrollView" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
+    <section class="page-header">
+      <h1 class="project-name">PWParallaxScrollView</h1>
+      <h2 class="project-tagline">PWParallaxScrollView is a library for creating sliding menus with parallax effect inspired by the WWF app</h2>
+      <a href="https://github.com/wpsteak/PWParallaxScrollView" class="btn">View on GitHub</a>
+      <a href="https://github.com/wpsteak/PWParallaxScrollView/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/wpsteak/PWParallaxScrollView/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
-<a name="pwparallaxscrollview" class="anchor" href="#pwparallaxscrollview"><span class="octicon octicon-link"></span></a>PWParallaxScrollView</h1>
+    <section class="main-content">
+      <h1>
+<a id="pwparallaxscrollview" class="anchor" href="#pwparallaxscrollview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PWParallaxScrollView</h1>
 
 <p>PWParallaxScrollView is a library for creating sliding menus with parallax effect inspired by the WWF app</p>
 
 <p><img src="https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/gif/screenshot.gif" alt=""></p>
 
 <h2>
-<a name="cocoapods" class="anchor" href="#cocoapods"><span class="octicon octicon-link"></span></a>CocoaPods</h2>
+<a id="cocoapods" class="anchor" href="#cocoapods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CocoaPods</h2>
 
-<pre><code>pod 'PWParallaxScrollView', '~&gt; 1.1.5'
+<p>for ObjC</p>
+
+<pre><code>pod 'PWParallaxScrollView', '~&gt; 1.2.0'
+
+</code></pre>
+
+<p>for Swift,</p>
+
+<pre><code>pod 'PWParallaxScrollView/Swift', '~&gt; 1.2.0'
 
 </code></pre>
 
 <h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
 <h5>
-<a name="import-header" class="anchor" href="#import-header"><span class="octicon octicon-link"></span></a>import header</h5>
+<a id="import-header" class="anchor" href="#import-header" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>import header</h5>
 
 <pre><code>#import "PWParallaxScrollView.h"
 </code></pre>
 
 <h5>
-<a name="follow-pwparallaxscrollviewdatasource-protocol" class="anchor" href="#follow-pwparallaxscrollviewdatasource-protocol"><span class="octicon octicon-link"></span></a>follow PWParallaxScrollViewDataSource protocol</h5>
+<a id="follow-pwparallaxscrollviewdatasource-protocol" class="anchor" href="#follow-pwparallaxscrollviewdatasource-protocol" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>follow PWParallaxScrollViewDataSource protocol</h5>
 
 <pre><code>@interface ViewController &lt;PWParallaxScrollViewDataSource&gt;
 </code></pre>
 
 <h5>
-<a name="implement-pwparallaxscrollviewdatasource-methods" class="anchor" href="#implement-pwparallaxscrollviewdatasource-methods"><span class="octicon octicon-link"></span></a>implement PWParallaxScrollViewDataSource methods</h5>
+<a id="implement-pwparallaxscrollviewdatasource-methods" class="anchor" href="#implement-pwparallaxscrollviewdatasource-methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>implement PWParallaxScrollViewDataSource methods</h5>
 
 <pre><code>- (NSInteger)numberOfItemsInScrollView:(PWParallaxScrollView *)scrollView;
 - (UIView *)backgroundViewAtIndex:(NSInteger)index scrollView:(PWParallaxScrollView *)scrollView;
@@ -67,21 +66,21 @@
 </code></pre>
 
 <h5>
-<a name="setting-foregroundscreenedgeinsets" class="anchor" href="#setting-foregroundscreenedgeinsets"><span class="octicon octicon-link"></span></a>setting ForegroundScreenEdgeInsets</h5>
+<a id="setting-foregroundscreenedgeinsets" class="anchor" href="#setting-foregroundscreenedgeinsets" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>setting ForegroundScreenEdgeInsets</h5>
 
 <h2>
-<a name="about-foregroundscreenedgeinsets" class="anchor" href="#about-foregroundscreenedgeinsets"><span class="octicon octicon-link"></span></a>About ForegroundScreenEdgeInsets</h2>
+<a id="about-foregroundscreenedgeinsets" class="anchor" href="#about-foregroundscreenedgeinsets" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About ForegroundScreenEdgeInsets</h2>
 
 <h3>
-<a name="custom-your-parallax-offset" class="anchor" href="#custom-your-parallax-offset"><span class="octicon octicon-link"></span></a>custom your parallax offset</h3>
+<a id="custom-your-parallax-offset" class="anchor" href="#custom-your-parallax-offset" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>custom your parallax offset</h3>
 
 <h5>
-<a name="foregroundscreenedgeinsets--uiedgeinsetsmake0-30-0-100" class="anchor" href="#foregroundscreenedgeinsets--uiedgeinsetsmake0-30-0-100"><span class="octicon octicon-link"></span></a>foregroundScreenEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 100);</h5>
+<a id="foregroundscreenedgeinsets--uiedgeinsetsmake0-30-0-100" class="anchor" href="#foregroundscreenedgeinsets--uiedgeinsetsmake0-30-0-100" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>foregroundScreenEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 100);</h5>
 
 <p><img src="https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/gif/edgeinsets.gif" alt=""></p>
 
 <h5>
-<a name="sample-code" class="anchor" href="#sample-code"><span class="octicon octicon-link"></span></a>sample code</h5>
+<a id="sample-code" class="anchor" href="#sample-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>sample code</h5>
 
 <pre><code>    self.scrollView = [[PWParallaxScrollView alloc] initWithFrame:self.view.bounds];
     _scrollView.foregroundScreenEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 100);
@@ -100,15 +99,15 @@
 </code></pre>
 
 <h3>
-<a name="normal" class="anchor" href="#normal"><span class="octicon octicon-link"></span></a>Normal</h3>
+<a id="normal" class="anchor" href="#normal" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Normal</h3>
 
 <h5>
-<a name="foregroundscreenedgeinsets--uiedgeinsetszero" class="anchor" href="#foregroundscreenedgeinsets--uiedgeinsetszero"><span class="octicon octicon-link"></span></a>foregroundScreenEdgeInsets = UIEdgeInsetsZero;</h5>
+<a id="foregroundscreenedgeinsets--uiedgeinsetszero" class="anchor" href="#foregroundscreenedgeinsets--uiedgeinsetszero" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>foregroundScreenEdgeInsets = UIEdgeInsetsZero;</h5>
 
 <p><img src="https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/gif/edgeinsets1.gif" alt=""></p>
 
 <h5>
-<a name="sample-code-1" class="anchor" href="#sample-code-1"><span class="octicon octicon-link"></span></a>sample code</h5>
+<a id="sample-code-1" class="anchor" href="#sample-code-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>sample code</h5>
 
 <pre><code>    self.scrollView = [[PWParallaxScrollView alloc] initWithFrame:self.view.bounds];
     _scrollView.foregroundScreenEdgeInsets = UIEdgeInsetsZero;
@@ -127,7 +126,7 @@
 </code></pre>
 
 <h2>
-<a name="hit-test" class="anchor" href="#hit-test"><span class="octicon octicon-link"></span></a>hit test</h2>
+<a id="hit-test" class="anchor" href="#hit-test" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>hit test</h2>
 
 <p><img src="https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/gif/screenshot1.gif" alt=""></p>
 
@@ -147,12 +146,12 @@
 </code></pre>
 
 <h2>
-<a name="movetoindex--prev--next" class="anchor" href="#movetoindex--prev--next"><span class="octicon octicon-link"></span></a>moveToIndex , prev , next</h2>
+<a id="movetoindex--prev--next" class="anchor" href="#movetoindex--prev--next" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>moveToIndex , prev , next</h2>
 
 <p><img src="https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/gif/screenshot3.gif" alt=""></p>
 
 <h5>
-<a name="sample-code-2" class="anchor" href="#sample-code-2"><span class="octicon octicon-link"></span></a>sample code</h5>
+<a id="sample-code-2" class="anchor" href="#sample-code-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>sample code</h5>
 
 <pre><code>    [scrollView moveToIndex:3];
 </code></pre>
@@ -164,12 +163,12 @@
 </code></pre>
 
 <h2>
-<a name="background-view-only" class="anchor" href="#background-view-only"><span class="octicon octicon-link"></span></a>background view only</h2>
+<a id="background-view-only" class="anchor" href="#background-view-only" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>background view only</h2>
 
 <p><img src="https://raw.githubusercontent.com/wpsteak/PWParallaxScrollView/master/gif/screenshot4.gif" alt=""></p>
 
 <h5>
-<a name="just-not-implement-the-foregroundviewatindexscrollview-method-or-return-nil" class="anchor" href="#just-not-implement-the-foregroundviewatindexscrollview-method-or-return-nil"><span class="octicon octicon-link"></span></a>just not implement the foregroundViewAtIndex:scrollView: method (or return nil)</h5>
+<a id="just-not-implement-the-foregroundviewatindexscrollview-method-or-return-nil" class="anchor" href="#just-not-implement-the-foregroundviewatindexscrollview-method-or-return-nil" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>just not implement the foregroundViewAtIndex:scrollView: method (or return nil)</h5>
 
 <pre><code>- (UIView *)foregroundViewAtIndex:(NSInteger)index scrollView:(PWParallaxScrollView *)scrollView;
 
@@ -177,7 +176,21 @@
 </code></pre>
 
 <h2>
-<a name="change-log-115" class="anchor" href="#change-log-115"><span class="octicon octicon-link"></span></a>Change Log 1.1.5</h2>
+<a id="change-log-120" class="anchor" href="#change-log-120" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Change Log 1.2.0</h2>
+
+<ul>
+<li>add swift version</li>
+</ul>
+
+<h4>
+<a id="thanks-for-contribution" class="anchor" href="#thanks-for-contribution" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Thanks for contribution</h4>
+
+<ul>
+<li><a href="https://github.com/yume190" class="user-mention">@yume190</a></li>
+</ul>
+
+<h2>
+<a id="change-log-115" class="anchor" href="#change-log-115" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Change Log 1.1.5</h2>
 
 <p>add delegate to receive touchScrollViewTapped event</p>
 
@@ -185,52 +198,48 @@
 </code></pre>
 
 <h4>
-<a name="thanks-for-contribution" class="anchor" href="#thanks-for-contribution"><span class="octicon octicon-link"></span></a>Thanks for contribution</h4>
+<a id="thanks-for-contribution-1" class="anchor" href="#thanks-for-contribution-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Thanks for contribution</h4>
 
 <ul>
 <li><a href="https://github.com/Morgan-Kennedy" class="user-mention">@Morgan-Kennedy</a></li>
-</ul><h2>
-<a name="change-log-110" class="anchor" href="#change-log-110"><span class="octicon octicon-link"></span></a>Change Log 1.1.0</h2>
+</ul>
+
+<h2>
+<a id="change-log-110" class="anchor" href="#change-log-110" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Change Log 1.1.0</h2>
 
 <ul>
 <li><p>add interface builder support (initWithCoder, Outlets)</p></li>
 <li><p>add PWParallaxDelegate and provides methods to check whether the current index is changed</p></li>
-</ul><h4>
-<a name="thanks-for-contribution-1" class="anchor" href="#thanks-for-contribution-1"><span class="octicon octicon-link"></span></a>Thanks for contribution</h4>
+</ul>
+
+<h4>
+<a id="thanks-for-contribution-2" class="anchor" href="#thanks-for-contribution-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Thanks for contribution</h4>
 
 <ul>
 <li><a href="https://github.com/matibot" class="user-mention">@matibot</a></li>
-</ul><h2>
-<a name="mit-license" class="anchor" href="#mit-license"><span class="octicon octicon-link"></span></a>MIT License</h2>
+</ul>
+
+<h2>
+<a id="mit-license" class="anchor" href="#mit-license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MIT License</h2>
 
 <p>PWParallaxScrollView is released under the MIT License (see the License file)</p>
 
 <h2>
-<a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h2>
+<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contact</h2>
 
 <p>Any suggestions or improvements?</p>
 
 <p>feel free to contact me</p>
 
 <p><a href="mailto:wpsteak@gmail.com">wpsteak@gmail.com</a></p>
-        </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/wpsteak/PWParallaxScrollView/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/wpsteak/PWParallaxScrollView/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/wpsteak/PWParallaxScrollView">PWParallaxScrollView</a> is maintained by <a href="https://github.com/wpsteak">wpsteak</a>.</span>
 
-          <p class="repo-owner"><a href="https://github.com/wpsteak/PWParallaxScrollView"></a> is maintained by <a href="https://github.com/wpsteak">wpsteak</a>.</p>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
 
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
+    </section>
 
   
   </body>
